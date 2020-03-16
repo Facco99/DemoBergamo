@@ -15,7 +15,15 @@ export class PrimoComponent implements OnInit {
   @Input()
   titoloInput: string;
 
-  constructor() { }
+  lista = [1, 2, 5, 6];
+
+  myDate: Date = new Date();
+
+  oggetto: {chiave: string};
+  oggetto1: {chiave: string} = {chiave:"valore"};
+
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }

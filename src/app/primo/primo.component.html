@@ -1,11 +1,24 @@
+<p>{{oggetto?.chiave}}</p>
+<p>{{oggetto1?.chiave}}</p>
+<!-- <div>{{lista[0]}}</div>
+     <div>{{lista[1]}}</div>
+     <div>{{lista[2]}}</div>
+Meglio la soluzione sotto di quella sopra -->
+<div *ngFor="let pippo of lista">{{pippo}}</div>
+
+<!-- Da preferire l'interpolazione -->
 <p>{{title}}</p>
 <p [innerHTML]="title"></p>
+<p>title</p>
 
 <div>{{htmlString}}</div>
 <div [innerHTML]="htmlString"></div>
 
+<!-- Qui preferire le property -->
 <div><a href="https://google.it">Link</a></div>
 <div><a [href]="LinkUrl">Link</a></div>
 <div><a href="{{LinkUrl}}">Link</a></div>
 
-<p>{{titoloInput}} works!</p>
+<p>{{titoloInput | uppercase}} works!</p>
+<p>{{myDate}}</p>
+<p>{{myDate | date:'longDate' | uppercase}}</p>
