@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'DemoBergamo';
-
-  htmlString = '<div><p>Prova</p></div>';
-  LinkUrl = 'https://google.it';
+  
+  title='Titolo';
 }
