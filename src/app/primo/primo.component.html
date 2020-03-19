@@ -19,6 +19,7 @@ Meglio la soluzione sotto di quella sopra -->
 <div><a [href]="LinkUrl">Link</a></div>
 <div><a href="{{LinkUrl}}">Link</a></div>
 
-<p>{{titoloInput | uppercase}} works!</p>
-<p>{{myDate}}</p>
-<p>{{myDate | date:'longDate' | uppercase}}</p>
+<p [class.colorRed]="toggleStyle" [class.boldStyle]="!toggleStyle">{{titoloInput | uppercase}} works!</p>
+<p class="boldStyle">{{myDate}}</p>
+<p [ngClass]="myStyle">{{myDate | date:'longDate' | uppercase}}</p>
+<button (click)="toggleStyle = !toggleStyle">Toggle style</button>
