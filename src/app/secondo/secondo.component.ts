@@ -31,4 +31,8 @@ export class SecondoComponent implements OnInit {
     this.testo = ev.target.value;
   }
 
+  clickNew(value: string){
+    console.log(value);
+  }
+
 }
