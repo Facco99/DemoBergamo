@@ -1,30 +1,26 @@
-<p>{{oggetto?.chiave}}</p>
-<p>{{oggetto1?.chiave}}</p>
-<!-- <div>{{lista[0]}}</div>
-     <div>{{lista[1]}}</div>
-     <div>{{lista[2]}}</div>
-Meglio la soluzione sotto di quella sopra -->
-<div *ngFor="let pippo of lista">{{pippo}}</div>
+<p *ngFor="let elemento of lista">{{elemento}}</p>
 
-<!-- Da preferire l'interpolazione -->
+<p [class.colorRed]="toggleStyle" [class.boldStyle]="!toggleStyle">{{titoloInput | lowercase}}</p>
+<p class="boldStyle">{{myDate}}</p>
+<p [ngClass]="myStyles">{{myDate | date:'longDate' | uppercase}}</p>
+<button (click)="toggleStyle = !toggleStyle">Toggle Style</button>
+
+
+<p>{{oggetto?.chiave}} </p>
+<p>{{oggetto1?.chiave}} </p>
+<!-- Da preferire l'interpolazione, a meno che non si ha dell'html nella string -->
 <p>{{title}}</p>
 <p [innerHTML]="title"></p>
 <p>title</p>
-
 <div>{{htmlString}}</div>
 <div [innerHTML]="htmlString"></div>
-
-<!-- Qui preferire le property -->
-<div><a href="https://google.it">Link</a></div>
-<div><a [href]="LinkUrl">Link</a></div>
-<div><a href="{{LinkUrl}}">Link</a></div>
-
-<p *ngFor="let elemento of lista">{{elemento}}</p>
-
-<p>{{lista[0]}}</p>
-<p>{{lista[1]}}</p>
-
-<p [class.colorRed]="toggleStyle" [class.boldStyle]="!toggleStyle">{{titoloInput | uppercase}} works!</p>
-<p class="boldStyle">{{myDate}}</p>
-<p [ngClass]="myStyle">{{myDate | date:'longDate' | uppercase}}</p>
-<button (click)="toggleStyle = !toggleStyle">Toggle style</button>
+<!-- qui sotto preferire le property -->
+<div>
+    <a href="https://google.it">Link</a>
+</div>
+<div>
+    <a [href]="linkUrl">Link</a>
+</div>
+<div>
+    <a href="{{linkUrl}}">Link</a>
+</div>
