@@ -23,7 +23,7 @@ export class PrimoComponent implements OnInit {
   htmlString = '<div><p>Prova</p></div>';
   LinkUrl = 'https://google.it';
   
-  @Input()
+  @Input('parametroInput')
   titoloInput: string;
 
   myDate: Date = new Date();
