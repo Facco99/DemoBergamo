@@ -6,6 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./primo.component.scss']
 })
 export class PrimoComponent implements OnInit {
+
+  lista:string[] =['stringa1','stringa2','stringa3'];
+
   toggleStyle: boolean =true;
 
   get myStyle(){
@@ -22,8 +25,6 @@ export class PrimoComponent implements OnInit {
   
   @Input()
   titoloInput: string;
-
-  lista = [1, 2, 5, 6];
 
   myDate: Date = new Date();
 

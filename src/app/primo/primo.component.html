@@ -19,6 +19,11 @@ Meglio la soluzione sotto di quella sopra -->
 <div><a [href]="LinkUrl">Link</a></div>
 <div><a href="{{LinkUrl}}">Link</a></div>
 
+<p *ngFor="let elemento of lista">{{elemento}}</p>
+
+<p>{{lista[0]}}</p>
+<p>{{lista[1]}}</p>
+
 <p [class.colorRed]="toggleStyle" [class.boldStyle]="!toggleStyle">{{titoloInput | uppercase}} works!</p>
 <p class="boldStyle">{{myDate}}</p>
 <p [ngClass]="myStyle">{{myDate | date:'longDate' | uppercase}}</p>
