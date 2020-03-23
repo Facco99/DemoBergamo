@@ -8,15 +8,7 @@ import { AppComponent } from './app.component';
 import { PrimoComponent } from './primo/primo.component';
 import { SecondoComponent } from './secondo/secondo.component';
 import { CiclovitaComponent } from './ciclovita/ciclovita.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-
-const appRoutes: Routes = [
-  { path: 'primo', component: PrimoComponent, data: {title:"Primo"} },
-  { path: 'secondo',      component: SecondoComponent, data: {title:"Primo Diverso"} },
-  { path: 'ciclo-vita',      component: CiclovitaComponent },
-  { path:'', redirectTo: '/primo', pathMatch:'full'},
-  { path: '**', component: PagenotfoundComponent},
-];
+import { DemoBergamoRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -29,10 +21,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-    )
-
+    DemoBergamoRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
