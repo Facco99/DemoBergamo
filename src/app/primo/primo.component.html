@@ -1,5 +1,7 @@
 <p [appHighlight]="color">Direttiva applicata</p>
 
+<p>{{2+3 | exponentialStrength:'3'}}</p>
+
 <p>
     My favourite color is
     <ng-container *ngIf="color != null; else coloreDefault">

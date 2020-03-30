@@ -12,6 +12,7 @@ import { DemoBergamoRoutingModule } from './app-routing.module';
 import { MenuComponent } from './menu/menu.component';
 import { HighlightDirective } from './highlight.directive';
 import { UnlessDirective } from './unless.directive';
+import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { UnlessDirective } from './unless.directive';
     CiclovitaComponent,
     MenuComponent,
     HighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    ExponentialStrengthPipe
   ],
   imports: [
     BrowserModule,
