@@ -11,6 +11,7 @@ import { CiclovitaComponent } from './ciclovita/ciclovita.component';
 import { DemoBergamoRoutingModule } from './app-routing.module';
 import { MenuComponent } from './menu/menu.component';
 import { HighlightDirective } from './highlight.directive';
+import { UnlessDirective } from './unless.directive';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HighlightDirective } from './highlight.directive';
     SecondoComponent,
     CiclovitaComponent,
     MenuComponent,
-    HighlightDirective
+    HighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

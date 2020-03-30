@@ -47,4 +47,8 @@ export class PrimoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cambiaColore(){
+    this.color = this.color == null ? 'orange': null;
+  }
+
 }
