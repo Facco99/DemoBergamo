@@ -9,6 +9,8 @@ import { ComunicazioneService } from '../comunicazione.service';
 })
 export class PrimoComponent implements OnInit {
 
+  color:string = "orange";
+
   lista: string[] = ['stringa1', 'stringa2', 'stringa3'];
 
 
