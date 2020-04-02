@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 
@@ -13,6 +13,8 @@ import { MenuComponent } from './menu/menu.component';
 import { HighlightDirective } from './highlight.directive';
 import { UnlessDirective } from './unless.directive';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -24,12 +26,15 @@ import { ExponentialStrengthPipe } from './exponential-strength.pipe';
     MenuComponent,
     HighlightDirective,
     UnlessDirective,
-    ExponentialStrengthPipe
+    ExponentialStrengthPipe,
+    TemplateFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     DemoBergamoRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

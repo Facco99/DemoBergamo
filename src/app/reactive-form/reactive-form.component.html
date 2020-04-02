@@ -1,0 +1,23 @@
+<form [formGroup]="heroForm">
+    <p>Form value: {{ heroForm.value | json }}</p>
+
+    <div>
+
+        <label for="name">Name</label>
+
+        <input type="text" id="name" required formControlName="name">
+    </div>
+
+    <div>
+
+        <label for="power">Hero Power</label>
+
+        <select id="power" required formControlName="name">
+            <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="!heroForm.form.valid">Submit</button>
+
+</form>
