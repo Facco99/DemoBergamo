@@ -15,6 +15,7 @@ import { UnlessDirective } from './unless.directive';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { RatingComponent } from './rating/rating.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     UnlessDirective,
     ExponentialStrengthPipe,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

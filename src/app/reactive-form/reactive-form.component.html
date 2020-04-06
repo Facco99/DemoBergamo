@@ -1,45 +1,42 @@
 <form [formGroup]="heroForm" (ngSubmit)="addHero()">
-    <p>Form value: {{ heroForm.value | json }}</p>
-
+    {{heroForm.value | json}}
     <div>
         <label for="name">Name</label>
         <input type="text" id="name" formControlName="name">
-        <p *ngIf="nameControl.status === 'INVALID' && nameControl.dirty">Campo nome obbligatorio!</p>
-
+        <p *ngIf="nameControl.status === 'INVALID' && nameControl.dirty">Campo nome obbligatorio</p>
     </div>
-
     <div>
         <label for="power">Hero Power</label>
         <select id="power" formControlName="power">
             <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
-      </select>
-        <p *ngIf="powerControl.status === 'INVALID' && powerControl.dirty">Campo nome obbligatorio!</p>
-
+        </select>
+        <p *ngIf="powerControl.status === 'INVALID' && powerControl.dirty">Campo potere obbligatorio</p>
     </div>
+    <div>
+        <label for="birthDate">Data di nascità</label>
+        <input type="date" id="birthDate" formControlName="birthDate">
+    </div>
+    <app-rating formControlName="rating"></app-rating>
     <div formGroupName="address">
         <div>
             <label for="street">Via</label>
             <input type="text" id="street" formControlName="street">
         </div>
-
         <div>
             <label for="city">Città</label>
             <input type="text" id="city" formControlName="city">
         </div>
-
         <div>
             <label for="state">Nazione</label>
             <input type="text" id="state" formControlName="state">
         </div>
-
         <div>
             <label for="zip">Cap</label>
             <input type="text" id="zip" formControlName="zip">
         </div>
     </div>
-
     <button type="submit" [disabled]="heroForm.status === 'INVALID'">Submit</button>
+    <button (click)="clearHero()">Pulisci</button>
 </form>
-<button (click)="clearHero()">Pulisci</button>
-<button (click)="setDefault()">Eroe default</button>
+<button (click)="setDefault()"> Metti eroe di default</button>
 <p *ngFor="let hero of heroList">{{hero.name}} - {{hero.power}}</p>
