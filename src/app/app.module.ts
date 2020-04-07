@@ -16,6 +16,7 @@ import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { RatingComponent } from './rating/rating.component';
+import { ObservableExampleComponent } from './observable-example/observable-example.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { RatingComponent } from './rating/rating.component';
     ExponentialStrengthPipe,
     TemplateFormComponent,
     ReactiveFormComponent,
-    RatingComponent
+    RatingComponent,
+    ObservableExampleComponent
   ],
   imports: [
     BrowserModule,
